@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
-import Button from './Components/button/Button';
-import Menu from './Components/menu/Menu';
+import Router from './pages/Router';
 
 const mobileMax = 425;
 const tabletMax = 992;
@@ -17,6 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    localStorage.setItem("isLogged", "false");
     window.addEventListener('resize', this.reportWindowSize);
   }
 
@@ -39,18 +39,9 @@ class App extends React.Component {
   render() {
     const { width,isMobile,isTablet } = this.state;
     return (
-      <>
-      <div className="App container-centralized">
-        width: {width}
-        {isMobile && 
-        <p>hola celu</p>
-        }
-        {isTablet &&
-        <a href="www.google.com">link the tablet</a>}
-        <Button content="text" isDisabled={false} handleClick={this.handleClick} />
+      <div className="App">
+        <Router />
       </div>
-      <Menu></Menu>
-      </>
     );
   }
 }
