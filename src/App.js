@@ -1,5 +1,6 @@
 import './App.css';
-import React from 'react'
+import React from 'react';
+import Button from './Components/button/Button';
 
 const mobileMax = 425;
 const tabletMax = 992;
@@ -30,17 +31,21 @@ class App extends React.Component {
     });
   }
 
+  handleClick() {
+    console.log("click");
+  }
+
   render() {
     const { width,isMobile,isTablet } = this.state;
     return (
-      <div className="App">
+      <div className="App centralized">
         width: {width}
         {isMobile && 
         <p>hola celu</p>
         }
         {isTablet &&
-        <a>link the tablet</a>}
-        <button>boton</button>
+        <a href="www.google.com">link the tablet</a>}
+        <Button content="text" isDisabled={false} handleClick={this.handleClick} />
       </div>
     );
   }
