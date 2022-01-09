@@ -10,7 +10,6 @@ class Button extends React.Component {
     handleNothing(event) {
         event.preventDefault();
         event.stopPropagation();
-        console.log("nothing");
     }
 
     render() {

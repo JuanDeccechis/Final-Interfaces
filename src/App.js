@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Button from './Components/button/Button';
+import Menu from './Components/menu/Menu';
 
 const mobileMax = 425;
 const tabletMax = 992;
@@ -38,7 +39,8 @@ class App extends React.Component {
   render() {
     const { width,isMobile,isTablet } = this.state;
     return (
-      <div className="App centralized">
+      <>
+      <div className="App container-centralized">
         width: {width}
         {isMobile && 
         <p>hola celu</p>
@@ -47,6 +49,8 @@ class App extends React.Component {
         <a href="www.google.com">link the tablet</a>}
         <Button content="text" isDisabled={false} handleClick={this.handleClick} />
       </div>
+      <Menu></Menu>
+      </>
     );
   }
 }
