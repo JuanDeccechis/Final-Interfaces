@@ -1,25 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const mobileMax = 425;
+const tabletMax = 992;
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth,
+      isMobile: window.innerWidth <= mobileMax,
+      isTablet: ((mobileMax < window.innerWidth) && (window.innerWidth <= tabletMax)),
+    }
+  }
+
+  componentDidMount(){
+    window.addEventListener('resize', this.reportWindowSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.reportWindowSize);
+  }
+
+  reportWindowSize = (event) => {
+    this.setState({ 
+      width: window.innerWidth, 
+      isMobile: window.innerWidth <= mobileMax, 
+      isTablet: ((mobileMax < window.innerWidth) && (window.innerWidth <= tabletMax)), 
+    });
+  }
+
+  render() {
+    const { width,isMobile,isTablet } = this.state;
+    return (
+      <div className="App">
+        width: {width}
+        {isMobile && 
+        <p>hola celu</p>
+        }
+        {isTablet &&
+        <a>link the tablet</a>}
+        <button>boton</button>
+      </div>
+    );
+  }
 }
 
 export default App;
