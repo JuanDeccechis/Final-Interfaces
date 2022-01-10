@@ -142,6 +142,10 @@ div {
     align-items: center;
 }
 
+.container-page {
+    height: calc(100vh - 210px);
+}
+
 @media screen and (min-width: 992px) { /*vista desktop*/
     h1 {
         height: 112px;

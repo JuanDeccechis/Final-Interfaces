@@ -37,7 +37,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { width,isMobile,isTablet } = this.state;
     return (
       <div className="App">
         <Router />
