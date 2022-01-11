@@ -11,7 +11,7 @@ class LoginPage extends Component {
 
     handleLoggin = () => {
         const { handleLoggin } = this.props;
-        let path = `/`;
+        let path = `/home`;
         handleLoggin();
         this.props.history.push(path);
     }

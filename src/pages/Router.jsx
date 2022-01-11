@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import HomePage from "./HomePage";
 import Menu from '../Components/menu/Menu';
@@ -13,7 +13,7 @@ class Router extends React.Component {
         }
     }
 
-    handleLoggin = () => {
+    handleToggleLoged = () => {
         localStorage.setItem("isLogged", !this.state.isLogged);
         this.setState({ isLogged : !this.state.isLogged });
     }
@@ -25,11 +25,13 @@ class Router extends React.Component {
                 <BrowserRouter basename="/Final-Interfaces">
                 {isLogged ? 
                     <Switch>
-                        <Route path="/" component={HomePage}></Route>
+                        <Route path="/home" component={(props) => <HomePage {...props} handleLogout={this.handleToggleLoged} /> }></Route>
+                        <Route exact path="/"><Redirect to="/home" /></Route>
                     </Switch>
                 :
                     <Switch>
-                        <Route path="/login" component={(props) => <LoginPage {...props} handleLoggin={this.handleLoggin} /> }></Route>
+                        <Route path="/login" component={(props) => <LoginPage {...props} handleLoggin={this.handleToggleLoged} /> }></Route>
+                        <Route exact path="/"><Redirect to="/login" /></Route>
                     </Switch>
                 }
                 </BrowserRouter>
