@@ -19,3 +19,13 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.menu-item {
+    border-right: 2px solid;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-item.menu-item-last {
+    border-right: 0;
+}

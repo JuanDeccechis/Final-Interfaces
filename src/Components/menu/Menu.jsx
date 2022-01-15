@@ -1,8 +1,11 @@
 import './Menu.css';
 import React from 'react';
+import { NavLink } from "react-router-dom";
+
+import Notification from '../notification/Notification';
+
 import HomeIcon from '@material-ui/icons/Home';
 import HelpIcon from '@material-ui/icons/Help';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 
@@ -15,19 +18,25 @@ class Menu extends React.Component {
     render() {
         return (
             <div className="container-menu menu">
-                <div className="menu-item container-centralized">
-                    <HomeIcon className="icon" />
-                    Home
-                </div>
-                <div className="menu-item container-centralized">
-                    <HelpIcon className="icon" />
-                    Preguntas
-                </div>
-                <div className="menu-item container-centralized">
-                    <NotificationsIcon className="icon" />
-                    Notif
-                </div>
-                <div className="menu-item container-centralized">
+                <NavLink exact to="/home" className="menu-item container-centralized" /*"link nav-text"*/ activeClassName="active"> 
+                    <div className="menu-item container-centralized">
+                        <HomeIcon className="icon" />
+                        Home
+                    </div>
+                </NavLink>
+                <NavLink exact to="/frecuentQuestions" className="menu-item container-centralized" /*"link nav-text"*/ activeClassName="active"> 
+                    <div className="menu-item container-centralized">
+                        <HelpIcon className="icon" />
+                        Preguntas
+                    </div>
+                </NavLink>
+                <NavLink exact to="/notifications" className="menu-item container-centralized" /*"link nav-text"*/ activeClassName="active"> 
+                    <div className="menu-item container-centralized">
+                        <Notification />
+                        Notif
+                    </div>
+                </NavLink>
+                <div className="menu-item menu-item-last container-centralized">
                     <AccountCircleIcon className="icon" />
                     Cuenta
                 </div>
