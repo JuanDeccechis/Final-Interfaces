@@ -2,7 +2,7 @@ import './Menu.css';
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
-import Notification from '../notification/Notification';
+import NotificationIcon from '../notificationIcon/NotificationIcon';
 
 import HomeIcon from '@material-ui/icons/Home';
 import HelpIcon from '@material-ui/icons/Help';
@@ -32,7 +32,7 @@ class Menu extends React.Component {
                 </NavLink>
                 <NavLink exact to="/notifications" className="menu-item container-centralized" /*"link nav-text"*/ activeClassName="active"> 
                     <div className="menu-item container-centralized">
-                        <Notification />
+                        <NotificationIcon />
                         Notif
                     </div>
                 </NavLink>

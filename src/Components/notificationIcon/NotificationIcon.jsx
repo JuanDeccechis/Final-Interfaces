@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import './Notification.css';
+import './NotificationIcon.css';
 
 
 class Notification extends Component {

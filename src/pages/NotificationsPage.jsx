@@ -49,7 +49,7 @@ class NotificationsPage extends Component {
         const { isLoading, value, showNotifications, notificationData } = this.state;
         return (
             <>
-                <Header headerName="Home" />
+                <Header headerName="Notificaciones" />
                 {isLoading ?
                     <Loader
                     type="TailSpin"
