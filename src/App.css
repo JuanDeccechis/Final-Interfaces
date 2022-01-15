@@ -14,6 +14,19 @@
     --primay-color: rgba(255, 255, 0, 1);
     --secondary-color: #007BAD;
     --disabled: #858585;
+    --icon-color: #007BAD;
+}
+
+.App {
+    height: 100%;
+}
+
+.container-pages {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 * {
@@ -142,8 +155,19 @@ div {
     align-items: center;
 }
 
-.container-page {
+article.container-pages {
+    height: 100%;
+    display: block;
+    padding: 0 23px;
+    width: calc(100% - 46px);
+}
+
+article.container-logged {
     height: calc(100vh - 210px);
+}
+
+article.container-no-logged{
+    height: calc(100% - 150px);
 }
 
 @media screen and (min-width: 992px) { /*vista desktop*/

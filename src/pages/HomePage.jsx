@@ -31,6 +31,7 @@ class HomePage extends Component {
 
     render() {
         const { isLoading } = this.state;
+        const { isLogged } = this.props;
         return (
             <>
                 <Header headerName="Home" />
@@ -43,7 +44,7 @@ class HomePage extends Component {
                     className="loader container-centralized container-page"
                     />
                 :
-                    <article className="container">
+                    <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
                         HOME
                         <p className="example-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sed provident cupiditate vitae commodi quae, earum autem quaerat! Praesentium quis distinctio incidunt fugit, facilis odio illo quam error culpa nemo!

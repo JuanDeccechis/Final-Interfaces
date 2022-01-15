@@ -21,16 +21,16 @@ class Router extends React.Component {
     render() {
         const { isLogged } = this.state;
         return (
-            <div className="container-centralized">
+            <div className="container-pages">
                 <BrowserRouter basename="/Final-Interfaces">
                 {isLogged ? 
                     <Switch>
-                        <Route path="/home" component={(props) => <HomePage {...props} handleLogout={this.handleToggleLoged} /> }></Route>
+                        <Route path="/home" component={(props) => <HomePage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>
                         <Route exact path="/"><Redirect to="/home" /></Route>
                     </Switch>
                 :
                     <Switch>
-                        <Route path="/login" component={(props) => <LoginPage {...props} handleLoggin={this.handleToggleLoged} /> }></Route>
+                        <Route path="/login" component={(props) => <LoginPage {...props} isLogged={isLogged} handleLoggin={this.handleToggleLoged} /> }></Route>
                         <Route exact path="/"><Redirect to="/login" /></Route>
                     </Switch>
                 }

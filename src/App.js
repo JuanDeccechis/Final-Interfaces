@@ -32,10 +32,6 @@ class App extends React.Component {
     });
   }
 
-  handleClick() {
-    console.log("click");
-  }
-
   render() {
     return (
       <div className="App">

@@ -1,0 +1,27 @@
+fieldset {
+    height: calc(26px + 36px);
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+legend {
+    height: 20px;
+}
+
+.error-text {
+    height: 22px;
+    width: 100%;
+}
+
+.input-margin {
+    margin-bottom: 22px;
+}
+
+#usuario {
+    border: 0;
+    height: 24px;
+    position: absolute;
+    top: -1px;
+    width: calc(100% - 36px);
+}
