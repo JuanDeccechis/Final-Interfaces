@@ -19,7 +19,7 @@ legend {
     margin-bottom: 22px;
 }
 
-#usuario {
+fieldset input {
     border: 0;
     height: 24px;
     position: absolute;

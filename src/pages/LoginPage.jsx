@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Button from '../Components/button/Button';
-import Input from '../Components/input/Input';
-import Input2 from '../Components/input/Input2';
+//import Input from '../Components/input/Input';
+//import Input2 from '../Components/input/Input2';
+import Input3 from '../Components/input/Input3';
 import Header from '../Components/header/Header';
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -14,8 +15,6 @@ class LoginPage extends Component {
         super(props);
         this.state = {
             visibilityPassword: false,
-            firstTry: true,
-            remember: false,
         };
         this.handleChangeVisibilityPassword =
         this.handleChangeVisibilityPassword.bind(this);
@@ -33,40 +32,39 @@ class LoginPage extends Component {
     }
 
     render() {
-        const { visibilityPassword, firstTry, remember } = this.state;
+        const { visibilityPassword } = this.state;
         const { isLogged } = this.props;
         return (
             <>
                 <Header headerName="Login" />
                 <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
-                    LOGIN
-                    <p className="example-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sed provident cupiditate vitae commodi quae, earum autem quaerat! Praesentium quis distinctio incidunt fugit, facilis odio illo quam error culpa nemo!
-                    </p>
-                    <Button content="login" isDisabled={false} handleClick={this.handleLoggin} />
-                    {/*<Input2 name={"usuario"} minLength="0" maxLength="20" type="text">
+                   {/*<Input name={"usuario"} minLength="0" maxLength="20" type="text">
                         <AccountCircleIcon className={`icon icon-color`} />
-                    </Input2>
-
-                    <Input2
-          name={"contraseña"}
-          type={visibilityPassword ? "text" : "password"}
-        >
-          <LockOpenIcon className={`icon icon-color`} />
-          {visibilityPassword ? (
-            <VisibilityOffIcon
-              className={`icon icon-color right`}
-              onClick={this.handleChangeVisibilityPassword}
-            />
-          ) : (
-            <VisibilityIcon
-              className={`icon icon-color right`}
-              onClick={this.handleChangeVisibilityPassword}
-            />
-          )}
-          </Input2>*/}
-
-        <Input />
+                        </Input>
+                        <Input2 name={"user"} minLength="0" maxLength="20" type="text">
+                        <AccountCircleIcon className={`icon icon-color`} />
+                    </Input2>*/}
+                    <Input3 name={"Usuario"} minLength="0" maxLength="20" type="text">
+                        <AccountCircleIcon className={`icon icon-color`} />
+                    </Input3>
+                    <Input3
+                        name={"Contraseña"}
+                        type={visibilityPassword ? "text" : "password"}
+                    >
+                        <LockOpenIcon className={`icon icon-color`} />
+                        {visibilityPassword ? (
+                            <VisibilityOffIcon
+                            className={`icon icon-color right`}
+                            onClick={this.handleChangeVisibilityPassword}
+                            />
+                        ) : (
+                            <VisibilityIcon
+                            className={`icon icon-color right`}
+                            onClick={this.handleChangeVisibilityPassword}
+                            />
+                        )}
+                    </Input3>
+                    <Button content="login" isDisabled={false} handleClick={this.handleLoggin} />
                 </article>
             </>
         )

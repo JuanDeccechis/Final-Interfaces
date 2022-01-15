@@ -1,7 +1,7 @@
-import './Input3.css';
-import React from 'react';
+import React, { Component } from "react";
+import './Input2.css';
 
-class Input3 extends React.Component {
+class Input2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,22 +12,23 @@ class Input3 extends React.Component {
         this.handleChangeInput = this.handleChangeInput.bind(this);
         this.validateInput = this.validateInput.bind(this);
     }
-    
+
     handleChangeInput(event) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
+
         this.setState({
             value: value,
         });
     }
-    
+
     handleKeyPress(event) {
         if (event.key === "Enter") {
-          event.preventDefault();
-          event.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
         }
     }
-    
+
     validateInput(event) {
         const { hasError } = this.props;
         let input = event.target;
@@ -36,21 +37,21 @@ class Input3 extends React.Component {
         switch (true) {
             case !input.value:
                 errorMessage = `Debes ingresar tu ${name}.`;
-            break;
+                break;
             case hasError:
                 errorMessage = `${name} incorrecta.`;
-            break;
+                break;
             case input.minLength > -1 && input.value.length < input.minLength:
                 errorMessage = `Tu ${name} debe contener al menos ${input.minLength} caracteres.`;
-            break;
+                break;
             case input.maxLength > -1 && input.value.length > input.maxLength:
                 errorMessage = `Tu ${name} debe contener hasta ${input.maxLength} caracteres.`;
-            break;
+                break;
             default:
                 errorMessage = null;
-            break;
+                break;
         }
-    
+
         this.setState({ error: errorMessage });
     }
 
@@ -58,7 +59,6 @@ class Input3 extends React.Component {
         const { error } = this.state;
         const { placeholder, name, minLength, maxLength, type, className } = this.props;
         let childrenWithExtraProp = [];
-    
         if (this.props.children) {
             childrenWithExtraProp = React.Children.map(this.props.children, child => {
                 return React.cloneElement(child, {
@@ -66,39 +66,37 @@ class Input3 extends React.Component {
                 });
               });
         }
+        else {
+            //console.log("sin hijo");
+        }
         return (
-            <>
-                <fieldset aria-hidden="true" className={`input-icons ${error ? '' : 'input-margin'}`}>
-                    <legend>
-                        <span className="text2">{`${placeholder ? placeholder : name} *`}</span>
-                    </legend>
-                    {this.props.children && 
-                        childrenWithExtraProp[0] /* el ícono */}
-                    
-                    <input
-                        id={name}
-                        name={name}
-                        className={`text1 ${
-                            error=== null ? "valid" : error ? "error" : ""
-                        } ${className ? className : ''}`}
-                        type={type}
-                        required
-                        minLength={minLength}
-                        maxLength={maxLength}
-                        value={this.state.value}
-                        onChange={this.handleChangeInput}
-                        onKeyPress={this.handleKeyPress}
-                        onBlur={this.validateInput}
-                    />
-                    
-                    {childrenWithExtraProp[1] /* el ojo */}
-                </fieldset>
-                {error &&
-                    <span className="text2 error-text">{error}</span>
+            <div className="input-icons">
+                {this.props.children && 
+                    childrenWithExtraProp[0] /* el ícono */
                 }
-            </>
+                <input
+                    id={name}
+                    name={name}
+                    className={`input-with-padding ${
+                      error=== null ? "valid" : error ? "error" : ""
+                    } ${className ? className : ''}`}
+                    type={type}
+                    placeholder={`${placeholder ? placeholder : name}*`}
+                    required
+                    minLength={minLength}
+                    maxLength={maxLength}
+                    value={this.state.value}
+                    onChange={this.handleChangeInput}
+                    onKeyPress={this.handleKeyPress}
+                    onBlur={this.validateInput}
+                />
+                {childrenWithExtraProp[1] /* el ojo */}
+                {error && (
+                    <span className="error-text">{error}</span>
+                )}
+            </div>
         );
-    }  
+    }
 }
-    
-export default Input3;
+
+export default Input2;
