@@ -1,0 +1,28 @@
+.plan-container {
+    width: calc(100% - 24px);
+    height: calc(100px - 32px);
+    padding: 16px 12px;
+}
+
+.plan-title {
+    width: calc(100% - 32px);
+    height: calc(24px);
+    padding: 16px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text1-bold {
+    font-weight: bold;
+}
+
+.plan-body {
+    width: calc(100% - 32px);
+    height: calc(98px);
+    background-color: red;
+    padding: 16px;
+    overflow-y: scroll;
+}

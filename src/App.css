@@ -160,7 +160,7 @@ article.container-pages {
     display: block;
     padding: 0 23px;
     width: calc(100% - 46px);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 article.container-logged {

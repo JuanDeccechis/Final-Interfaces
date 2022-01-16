@@ -18,12 +18,22 @@ class LoginPage extends Component {
         };
         this.handleChangeVisibilityPassword =
         this.handleChangeVisibilityPassword.bind(this);
+        this.handleGoPlans = this.handleGoPlans.bind(this);
+    }
+
+    componentDidMount() {
+        localStorage.setItem("plan", "asd");
     }
 
     handleLoggin = () => {
         const { handleLoggin } = this.props;
         let path = `/home`;
         handleLoggin();
+        this.props.history.push(path);
+    }
+
+    handleGoPlans = () => {
+        let path = `/plans`;
         this.props.history.push(path);
     }
 
@@ -65,7 +75,8 @@ class LoginPage extends Component {
                         )}
                     </Input3>
                     <Button content="login" isDisabled={false} handleClick={this.handleLoggin} />
-                </article>
+                    <Button content="planes" isDisabled={false} handleClick={this.handleGoPlans} />
+            </article>
             </>
         )
     }
