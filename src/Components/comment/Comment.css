@@ -55,3 +55,22 @@
     justify-content: center;
     align-items: flex-start;
 }
+
+fieldset textarea {
+    border: 0;
+    height: 24px;
+    position: absolute;
+    top: 7px;
+    width: calc(100% - 96px);
+    padding: 0;
+}
+
+.newComment {
+    height: calc(80px + 46px);
+}
+
+.newComment textarea {
+    height: 80px;
+    width: 300px;
+    overflow-y: scroll;
+}

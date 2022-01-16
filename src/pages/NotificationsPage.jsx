@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from '../Components/header/Header';
 import Notification from '../Components/notification/Notification';
 import Comment from '../Components/comment/Comment';
+import NewComment from '../Components/comment/NewComment';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -63,6 +64,7 @@ class NotificationsPage extends Component {
                     <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
                         <Notification />
                         <Comment />
+                        <NewComment name={"Nuevo comentario"} minLength="0" type="text"/>
                     </article>
                 }
             </>
