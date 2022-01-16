@@ -4,36 +4,36 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import './NotificationIcon.css';
 
 
-class Notification extends Component {
+class NotificationIcon extends Component {
     constructor(props) {
         super(props);
         this.state = {
             value: 5,
         };
-        this.handleClickNotification = this.handleClickNotification.bind(this);
+        this.handleClickNotificationIcon = this.handleClickNotificationIcon.bind(this);
     }
 
     componentDidMount() {
         
     }
 
-    handleClickNotification() {
+    handleClickNotificationIcon() {
         this.setState({ showNotifications: !this.state.showNotifications });
     }
 
     render(){
         const { value, showNotifications } = this.state;
         return(
-            <div className="notification-relative">
+            <div className="notificationIcon-relative">
 
                 { value === 0 ?
-                    <div className="notification-container">
+                    <div className="notificationIcon-container">
                         <NotificationsIcon className="icon" />
                     </div>
                     :
-                    <div className="notification-container notification-not-empty" >
+                    <div className="notificationIcon-container notificationIcon-not-empty" >
                         <NotificationsActiveIcon className={`icon ${showNotifications ? 'active' : ''}`}/>
-                    <span className="notification-badge-value">{value}</span>
+                    <span className="notificationIcon-badge-value">{value}</span>
                 </div>
                 }
             </div>
@@ -41,4 +41,4 @@ class Notification extends Component {
     }
 }
 
-export default (Notification);
+export default (NotificationIcon);

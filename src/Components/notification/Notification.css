@@ -1,0 +1,46 @@
+.notification-container {
+    width: calc(100% - 24px);
+    height: calc(100px - 32px);
+    padding: 16px 12px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.notification-container.input-icons svg {
+    top: auto;
+    left: -12px;
+}
+
+.notification-container.input-icons svg.right {
+    left: auto;
+    right: -12px;
+}
+
+.notification-container p.text1 {
+    border: 0;
+    height: 100%;
+    position: absolute;
+    left: 36px;
+    width: calc(100% - 72px);
+    padding: 0;
+}
+
+.notification-container span.text2 {
+    height: 20px;
+}
+
+.notification-body {
+    height: calc(100% - 20px);
+}
+
+.notification-date {
+    height: 20px;
+    color: grey;
+}
+
+.notification-date span {
+    position: absolute;
+    right: 0;
+}

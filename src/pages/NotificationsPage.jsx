@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from '../Components/header/Header';
-import Button from '../Components/button/Button';
+import Notification from '../Components/notification/Notification';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -60,17 +60,7 @@ class NotificationsPage extends Component {
                     />
                 :
                     <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
-                        NOTIF
-                        <div id="myDropdown" className="dropdown-content">
-                    <div className="user_ctrl_box center">
-                        <h2 className="dropdown-title">{notificationData.length} Notificaciones</h2>
-                        { notificationData.map((notif, index) => 
-                            <div className="notification_user_dropdown_menu" key={index}>
-                                <span>{notif.text}</span>
-                            </div>
-                        )}
-                    </div>   
-                </div>
+                        <Notification />
                     </article>
                 }
             </>
