@@ -15,7 +15,12 @@ class Comment extends React.Component {
             <div className="comment-container input-icons">
                 <div className="comment-body">
                     <AccountCircleIcon className={`icon icon-color`} />
-                    <p className="text1">Noti1</p>
+                    <div className="comment-text-body">
+                        <span className="text1">
+                            Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Cumque iure magni, ratione tempora, iste quos ea harum sed recusandae totam, voluptates velit id ex tenetur itaque delectus eius perspiciatis laboriosam?    
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, repellat dolorum. Eaque voluptatibus totam ipsum veritatis aut vel sequi repellendus. Ea corporis totam facere id recusandae perferendis aliquam quas saepe.                       
+                        </span>
+                    </div>
                     <div className="comment-calification">
                         <span>4</span>
                         <StarIcon className={`icon icon-color right`} />
