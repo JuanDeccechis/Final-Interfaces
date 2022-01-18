@@ -1,6 +1,6 @@
 .notification-container {
     width: calc(100% - 24px);
-    height: calc(100px - 32px);
+    min-height: calc(100px - 32px);
     padding: 16px 12px;
     background-color: aqua;
     display: flex;
@@ -18,12 +18,9 @@
     right: -12px;
 }
 
-.notification-container p.text1 {
+.notification-container span.text1 {
     border: 0;
-    height: 100%;
-    position: absolute;
-    left: 36px;
-    width: calc(100% - 72px);
+    min-height: 100%;
     padding: 0;
 }
 
@@ -32,7 +29,12 @@
 }
 
 .notification-body {
-    height: calc(100% - 20px);
+    min-height: calc(100% - 20px); /*de 48 a 80 = 32*/
+}
+
+.notification-text-body {
+    width: calc(100% - 36px);
+    left: 36px;
 }
 
 .notification-date {

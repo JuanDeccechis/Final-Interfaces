@@ -71,6 +71,6 @@ fieldset textarea {
 
 .newComment textarea {
     height: 80px;
-    width: 300px;
+    width: calc(100% - 24px);
     overflow-y: scroll;
 }

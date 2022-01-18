@@ -30,8 +30,8 @@ class Router extends React.Component {
                     <>
                         <Switch>
                             <Route path="/home" component={(props) => <HomePage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>
-                            <Route path="/notifications" component={(props) => <NotificationsPage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>
-                            <Route path="/frecuentQuestions" component={(props) => <FrecuentQuestionsPage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>                            
+                            <Route path="/notifications" component={(props) => <NotificationsPage {...props} isLogged={isLogged} /> }></Route>
+                            <Route path="/frecuentQuestions" component={(props) => <FrecuentQuestionsPage {...props} isLogged={isLogged} /> }></Route>                            
                             <Route exact path="/"><Redirect to="/home" /></Route>
                         </Switch>
                         <Menu />
