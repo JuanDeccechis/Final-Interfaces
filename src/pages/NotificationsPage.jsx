@@ -47,7 +47,7 @@ class NotificationsPage extends Component {
     }
 
     render() {
-        const { isLogged } = this.props;
+        const { isLogged, primayColor } = this.props;
         const { isLoading, value, showNotifications, notificationData } = this.state;
         return (
             <>
@@ -55,7 +55,7 @@ class NotificationsPage extends Component {
                 {isLoading ?
                     <Loader
                     type="TailSpin"
-                    color="#007BAD"
+                    color={primayColor}
                     height={100}
                     width={100}
                     className="loader container-centralized container-page"

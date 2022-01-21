@@ -32,14 +32,14 @@ class PlansPage extends Component {
 
     render() {
         const { isLoading, plan } = this.state;
-        const { isLogged } = this.props;
+        const { isLogged, primayColor } = this.props;
         return (
             <>
             <Header headerName="Preguntas" />
             {isLoading ?
                 <Loader
                 type="TailSpin"
-                color="#007BAD"
+                color={primayColor}
                 height={100}
                 width={100}
                 className="loader container-centralized container-page"

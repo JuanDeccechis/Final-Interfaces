@@ -33,14 +33,14 @@ class FrecuentQuestionsPage extends Component {
 
     render() {
         const { isLoading } = this.state;
-        const { isLogged } = this.props;
+        const { isLogged, primayColor } = this.props;
         return (
             <>
             <Header headerName="Preguntas" />
             {isLoading ?
                 <Loader
                 type="TailSpin"
-                color="#007BAD"
+                color={primayColor}
                 height={100}
                 width={100}
                 className="loader container-centralized container-page"
@@ -49,6 +49,7 @@ class FrecuentQuestionsPage extends Component {
                 <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
                     <div>
                         <p className="text1">Puedes contactarnos al 0800-sp.five, en caso que la siguiente lista no resuelva tu consulta.</p>
+                        <h2 className="FAQ-title">Pagos</h2>
                         <FAQ />
                     </div>
                 </article>

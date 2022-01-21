@@ -21,6 +21,7 @@ legend {
 
 fieldset input {
     border: 0;
+    outline:0; /* el borde cuando cliqueo en el input*/
     height: 24px;
     position: absolute;
     top: 7px;

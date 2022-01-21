@@ -13,6 +13,7 @@ class Router extends React.Component {
         super(props);
         this.state = {
             isLogged: localStorage.getItem("isLogged") === "true",
+            primayColor: "#007BAD"
         }
     }
 
@@ -22,24 +23,24 @@ class Router extends React.Component {
     }
 
     render() {
-        const { isLogged } = this.state;
+        const { isLogged, primayColor } = this.state;
         return (
             <div className="container-pages">
                 <BrowserRouter basename="/Final-Interfaces">
                 {isLogged ? 
                     <>
                         <Switch>
-                            <Route path="/home" component={(props) => <HomePage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>
-                            <Route path="/notifications" component={(props) => <NotificationsPage {...props} isLogged={isLogged} /> }></Route>
-                            <Route path="/frecuentQuestions" component={(props) => <FrecuentQuestionsPage {...props} isLogged={isLogged} /> }></Route>                            
+                            <Route path="/home" component={(props) => <HomePage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} primayColor={primayColor} /> }></Route>
+                            <Route path="/notifications" component={(props) => <NotificationsPage {...props} isLogged={isLogged} primayColor={primayColor} /> }></Route>
+                            <Route path="/frecuentQuestions" component={(props) => <FrecuentQuestionsPage {...props} isLogged={isLogged} primayColor={primayColor} /> }></Route>                            
                             <Route exact path="/"><Redirect to="/home" /></Route>
                         </Switch>
                         <Menu />
                     </>
                 :
-                <Switch>
-                        <Route path="/login" component={(props) => <LoginPage {...props} isLogged={isLogged} handleLoggin={this.handleToggleLoged} /> }></Route>
-                        <Route path="/plans" component={(props) => <PlansPage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} /> }></Route>                            
+                    <Switch>
+                        <Route path="/login" component={(props) => <LoginPage {...props} isLogged={isLogged} handleLoggin={this.handleToggleLoged} primayColor={primayColor} /> }></Route>
+                        <Route path="/plans" component={(props) => <PlansPage {...props} isLogged={isLogged} handleLogout={this.handleToggleLoged} primayColor={primayColor} /> }></Route>                            
                         <Route exact path="/"><Redirect to="/login" /></Route>
                     </Switch>
                 }

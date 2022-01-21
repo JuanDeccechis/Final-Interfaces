@@ -18,8 +18,8 @@
     display: flex;
     padding: 0 6px;
     position: absolute;
-    color: #fff;
-    background-color: #04AA6D;
+    color: var(--primay-color);
+    background-color: var(--secondary-color);
     right: 0;
     transform: scale(1) translate(50%, -50%);
 }
@@ -30,9 +30,9 @@
     display: flex;
     justify-content: center;
 }
-
+/* para web
 #myDropdown {
-    background: rgba(4, 170, 109,.98);
+    background: var(--secondary-color);
 }
 
 #myDropdown::before {
@@ -40,18 +40,18 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: rgba(4, 170, 109,.98);
+    background-color: var(--secondary-color);
     top: 0;
     right: 0;
     transform: translate(-50%, -50%) rotate(45deg);
 }
-
+*/
 .dropdown-content {
     display: block;
     position: absolute;
     right: auto;
     top: 45px;
-    background-color: #04AA6D;
+    background-color: var(--secondary-color);
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*buena sombra*/
     border-radius: 10px;
@@ -64,17 +64,17 @@
 }
 
 .dropdown-content span {
-    color: white;
+    color: var(--primay-color);
     text-decoration: none;
     display: block;
-    background-color: transparent;
+    background-color: var(--secondary-color);
 }
 
 .notificationIcon_user_dropdown_menu{
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    border-top: 2px solid #fff;
+    border-top: 2px solid var(--primay-color);
 }
 
 .notificationIcon_user_dropdown_menu a{
@@ -84,7 +84,7 @@
 
 .dropdown-content span.notificationIcon-delete{
     width: 20%;
-    background-color: gray;
+    background-color: var(--primay-color);
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -96,6 +96,6 @@
     width: 90%;
     margin: 10px auto;
     padding: 5px 0;
-    background: rgba(0, 0, 139,.98);
+    background: var(--primay-color);
     border-radius: 100px;
 }

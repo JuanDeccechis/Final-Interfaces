@@ -11,8 +11,8 @@
     --primay-color-hover: rgba(255, 255, 0, 0.7);
     --disabled: #d8d8d8;*/
     --link: #007BAD;
-    --primay-color: rgba(255, 255, 0, 1);
-    --secondary-color: #007BAD;
+    --primay-color: #007BAD;
+    --secondary-color: rgba(255, 255, 0, 1);
     --disabled: #858585;
     --icon-color: #007BAD;
 }
@@ -148,6 +148,10 @@ div {
     width: 100%;
 }
 
+textarea {
+    resize: none;
+}
+
 .container-centralized {
     display: flex;
     flex-direction: column;
@@ -160,7 +164,7 @@ article.container-pages {
     display: block;
     padding: 0 23px;
     width: calc(100% - 46px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 article.container-logged {
@@ -171,6 +175,26 @@ article.container-no-logged{
     height: calc(100% - 150px);
 }
 
+.FAQ-title {
+    text-align: left;
+}
+
+/* scrollbar*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primay-color);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+
+/*desktop view*/
 @media screen and (min-width: 992px) { /*vista desktop*/
     h1 {
         height: 112px;

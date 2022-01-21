@@ -2,7 +2,7 @@
     width: calc(100% - 24px);
     min-height: calc(100px - 32px);
     padding: 16px 12px;
-    background-color: aqua;
+    background-color: var(--primay-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,7 +39,7 @@
 
 .comment-date {
     height: 20px;
-    color: grey;
+    color: var(--disabled);
 }
 
 .comment-date span {
@@ -61,10 +61,9 @@
 
 fieldset textarea {
     border: 0;
-    height: 24px;
+    outline:0; /* el borde cuando cliqueo en el input*/
     position: absolute;
     top: 7px;
-    width: calc(100% - 96px);
     padding: 0;
 }
 
@@ -75,5 +74,5 @@ fieldset textarea {
 .newComment textarea {
     height: 80px;
     width: calc(100% - 24px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }

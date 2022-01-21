@@ -8,7 +8,7 @@
     width: calc(100% - 32px);
     height: calc(24px);
     padding: 16px;
-    background-color: blue;
+    background-color: var(--primay-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,7 +22,8 @@
 .plan-body {
     width: calc(100% - 32px);
     height: calc(98px);
-    background-color: red;
+    background-color: var(--primay-color);
+    opacity: 0.5;
     padding: 16px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
