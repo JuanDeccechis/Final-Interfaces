@@ -18,6 +18,9 @@ ul.accordion-list li span.text1.bold {
     height: 56px;
     background-color: var(--primay-color);
     margin-bottom: 16px;
+    border: 1px solid #C2C8D0;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .accordion-title {
