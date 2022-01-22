@@ -1,41 +1,28 @@
-.questions-form{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
-    background-color: rgba(29, 37, 51, 0.5);
+ul.accordion-list {
+    padding: 0;
 }
 
-.questions-titles {
-    border: 1px solid white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 55px; /*grow, shrink, basis*/
+ul.accordion-list li {
+    list-style-type: none;
+}
+
+ul.accordion-list li span.text1.bold {
     font-weight: bold;
 }
 
-.accordion {
-    padding: 0 16px;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-.inline{
+.accordion-title-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    height: 56px;
+    background-color: var(--primay-color);
+    margin-bottom: 16px;
 }
 
 .accordion-title {
-    padding: 12px 0; /*para que tenga separacion*/
+    padding: 0 12px;
     width: calc(100% - 48px);
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
 }
 
 .accordion-content {
@@ -45,17 +32,17 @@
     transition-duration: 1s;
     transition-timing-function: ease-out;
     transition-property: max-height;
+    background-color: var(--secondary-color);
+    top: -16px;
 }
 
-.accordion-content p{
+.accordion-content-position {
+    padding: 16px 12px;
+    width: calc(100% - 24px);
+}
+
+.accordion-content span{
     margin-top: 0;
-}
-
-.accordion-list li {
-    font-weight: bold;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
 }
 
 .animaAccordion {
@@ -66,6 +53,7 @@
 }
 
 .selectorAccordion{
+    width: 48px;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     -ms-transition: -ms-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;  
