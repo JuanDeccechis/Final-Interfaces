@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Header from '../Components/header/Header';
 import Button from '../Components/button/Button';
+import Input3 from '../Components/input/Input3';
+import SearchIcon from '@material-ui/icons/Search';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -47,6 +49,9 @@ class HomePage extends Component {
                     <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
                         HOME
                         <Button content="logout" isDisabled={false} handleClick={this.handleLogout} />
+                        <Input3 name={"Usuario"} minLength="0" maxLength="20" type="text">
+                        <SearchIcon className={`icon icon-color right`} />
+                    </Input3>
                     </article>
                 }
             </>
