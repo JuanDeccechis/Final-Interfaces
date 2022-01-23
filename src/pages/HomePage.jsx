@@ -46,9 +46,6 @@ class HomePage extends Component {
                 :
                     <article className={`container-pages ${isLogged ? 'container-logged' : 'container-no-logged'}`}>
                         HOME
-                        <p className="example-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sed provident cupiditate vitae commodi quae, earum autem quaerat! Praesentium quis distinctio incidunt fugit, facilis odio illo quam error culpa nemo!
-                        </p>
                         <Button content="logout" isDisabled={false} handleClick={this.handleLogout} />
                     </article>
                 }

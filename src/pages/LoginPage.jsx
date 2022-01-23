@@ -4,6 +4,11 @@ import Button from '../Components/button/Button';
 //import Input2 from '../Components/input/Input2';
 import Input3 from '../Components/input/Input3';
 import Header from '../Components/header/Header';
+import Card from '../Components/card/Card';
+import CardFlipable from '../Components/card/CardFlipable';
+import CardBootstrapFlipable from '../Components/card/CardBootstrapFlipable';
+
+import CardWithHover from '../Components/card/CardWithHover';
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
@@ -74,7 +79,13 @@ class LoginPage extends Component {
                             />
                         )}
                     </Input3>
+                    <CardBootstrapFlipable title="asd" detail="lorem ipsul" img={null} height={100}/>
+                    
                     <Button content="login" isDisabled={false} handleClick={this.handleLoggin} />
+                    <Card title="asd" detail="lorem ipsul" img={null} height={100}/>
+                    <CardFlipable title="asd" detail="lorem ipsul" img={null} height={100}/>
+                    <CardWithHover title="asd" detail="lorem ipsul" img={null} height={100}/>
+                        
                     <Button content="planes" isDisabled={false} handleClick={this.handleGoPlans} />
             </article>
             </>
