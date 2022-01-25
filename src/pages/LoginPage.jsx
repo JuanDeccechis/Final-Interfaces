@@ -4,6 +4,7 @@ import Button from '../Components/button/Button';
 //import Input2 from '../Components/input/Input2';
 import Input3 from '../Components/input/Input3';
 import Header from '../Components/header/Header';
+import Carrousel from '../Components/carrousel/Carrousel';
 import Card from '../Components/card/Card';
 import CardFlipable from '../Components/card/CardFlipable';
 import CardBootstrapFlipable from '../Components/card/CardBootstrapFlipable';
@@ -79,6 +80,7 @@ class LoginPage extends Component {
                             />
                         )}
                     </Input3>
+<Carrousel />
                     <CardBootstrapFlipable title="asd" detail="lorem ipsul" img={null} height={100}/>
                     
                     <Button content="login" isDisabled={false} handleClick={this.handleLoggin} />

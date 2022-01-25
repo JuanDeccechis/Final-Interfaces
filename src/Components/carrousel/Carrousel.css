@@ -1,0 +1,35 @@
+.foto {
+    background-image: url("../../images/foto.png");
+}
+
+.image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
+    width: 50px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+  }
+  
+  .container {
+    padding: 2px 0;
+    text-align: center;
+  }
+
+.carrousel {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
